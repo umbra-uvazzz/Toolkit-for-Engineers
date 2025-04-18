@@ -3,6 +3,7 @@
 import os
 from port_scanner import run_port_scanner
 from pass_r import check_password_strength
+from brut_sim import scan_password
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -14,6 +15,7 @@ def main():
         print("┌─[ Toolkit for Engineers ]")
         print("│  1. Port Scanner")
         print("│  2. Check Password Strength")
+        print("|  3. Brute Force Simulator")
         print("│  0. Exit")
         print("└─ Choose an option:")
         
@@ -30,6 +32,13 @@ def main():
             check_password_strength(password)
 
             input("\nPress Enter to Continue...")
+
+        elif choice == '3':
+
+            pwd = input("Enter password to simulate brute-force: ")    
+            scan_password(pwd)
+     
+            input("\nPress Enter to continue...")
 
         elif choice == '0':
 
