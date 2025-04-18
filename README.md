@@ -7,3 +7,5 @@ perfect for learning, ethical hacking, or network auditing.
 Check your password strength
 A simple Python tool that analyzes your password and gives you a clear rating: from Weak to Very Strong — based on length, character variety, and common best practices.
 It also provides personalized suggestions to help you build stronger, more secure passwords.
+
+Brute force simulator simulates a brute force attack, it's still under developement, it's not complete and has memory allocation issues
