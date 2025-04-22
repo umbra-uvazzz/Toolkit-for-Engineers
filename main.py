@@ -4,6 +4,7 @@ import os
 from port_scanner import run_port_scanner
 from pass_r import check_password_strength
 from brut_sim import scan_password
+from combo_gen import run_combo_generator
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -16,7 +17,8 @@ def main():
         print("│  1. Port Scanner")
         print("│  2. Check Password Strength")
         print("|  3. Brute Force Simulator")
-        print("│  0. Exit")
+        print("|  4. Generate a wordlist")
+        print("│  Exit")
         print("└─ Choose an option:")
         
         choice = input("shell_$~ ").strip()
@@ -40,7 +42,10 @@ def main():
      
             input("\nPress Enter to continue...")
 
-        elif choice == '0':
+        elif choice == '4':
+            run_combo_generator()
+
+        elif choice == 'exit':
 
             print("\n[+] Exiting... Stay safe, bruv 😎")
             break
